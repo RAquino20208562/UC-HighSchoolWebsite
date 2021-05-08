@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>UC HIGHSCHOOL WEBSITE</title>
+<meta charset="utf-8">
+<meta name "author" content = "Rafael Martin E. Aquino">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/StyleSheet.css">
+</head>
+
+<body>
+<!--header-->
+<section class = "fifth-header">
+<nav>
+	<!--logo-->
+	<a class = "logo">
+	<img src = "image/uclogo.png">
+	</a>
+	
+	<!--resposive menu-->
+	<input class = "menu-btn" type = "checkbox" id = "menu-btn">
+	<label class = "menu-icon" for = "menu-btn">
+	<span class = "nav-icon"></span>
+	</label>
+	
+	<!--navigation-->
+	<ul class = "menu">
+	<li>
+	<a href = "index.html">HOME</a></li>
+
+	<li>
+	<a href = "Page2.html">COURSE</a></li>
+
+	<li>
+	<a href = "Page3.html">TEACHERS</a></li>
+
+	<li>
+	<a href = "Page4.html">EVENTS</a></li>
+
+	<li>
+	<a href = "Page5.html">EXPERIENCES</a></li>
+	
+	<li>
+	<a href = "Page6.html">CONTACT US</a></li>
+</nav>
+</section>
+
+<!--content-->
+
+<!--heading-->
+<div class = "slideshow-container">
+<div class = "slideshow-text">
+	<h1>EXPERIENCES</h1>
+	<p>These are some pictures of my experience in University of the Cordilleras</p>
+	<h4>NOTE: You can zoom in and zoom out in this page if you are using your phone or tablet.</h4>
+</div>
+
+<!--image-->
+<div class = "mySlides-img">
+	<img src = "image/pic2.jpg">
+</div>
+
+<div class = "mySlides-img">
+	<img src = "image/pict3.jpeg">
+</div>
+
+<div class = "mySlides-img">
+	<img src = "image/pict4.jpeg">
+</div>
+
+<div class = "mySlides-img">
+	<img src = "image/pict8.jpeg">
+</div>
+
+<div class = "mySlides-img">
+	<img src = "image/pic1.jpeg">
+</div>
+
+<div class = "mySlides-img">
+	<img src = "image/pict5.jpeg">
+</div>
+
+<div class = "mySlides-img">
+	<img src = "image/pict2.jpeg">
+</div>
+
+<div class = "mySlides-img">
+	<img src = "image/pict6.jpeg">
+</div>
+</div>
+
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides-img");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+<!--footer-->
+<footer>
+	<p>Copyright © 2020. University of the Cordilleras. All rights reserved.<br>
+	Governor Pack Road, Baguio City, Philippines 2600</p>
+</footer>
+
+</body>
+</html>
